@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="690.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.krism.adduser.AddUserController">
+   <children>
+      <VBox alignment="CENTER" layoutX="95.0" layoutY="234.0" prefHeight="159.0" prefWidth="541.0" spacing="40.0">
+         <children>
+            <JFXTextField fx:id="UserNameField" focusColor="#1e2b3c" labelFloat="true" onAction="#NewUserAction" prefHeight="52.0" prefWidth="540.0" promptText="Введите имя пользователя" style="-fx-prompt-text-fill: #1e2b3c; -fx-text-inner-color: #1e2b3c;" unFocusColor="#1e2b3c">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="PasswordField" focusColor="#1e2b3c" labelFloat="true" onAction="#NewUserAction" prefHeight="50.0" prefWidth="540.0" promptText="Введите пароль" style="-fx-prompt-text-fill: #1e2b3c; -fx-text-inner-color: #1e2b3c;" unFocusColor="#1e2b3c">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <JFXButton fx:id="ButtonLogin" buttonType="RAISED" layoutX="264.0" layoutY="504.0" onAction="#NewUserAction" prefHeight="61.0" prefWidth="163.0" ripplerFill="BLACK" style="-fx-background-color: #1e2b3c; fx-border-color: transparent; -fx-border-color: #fff; -fx-border-width: 3 3 3 3;" text="  ВОЙТИ" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="key_pic_Login_Btn" fitHeight="36.0" fitWidth="42.0" layoutX="286.0" layoutY="517.0" onMouseClicked="#NewUserAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/key.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="233.0" layoutY="393.0" prefHeight="100.0" prefWidth="222.0">
+         <children>
+            <JFXToggleButton fx:id="isAdminButton" onAction="#isAdminButtonAction" text="Работник" textAlignment="CENTER" textFill="#1e2b3c" toggleColor="#95ccff" toggleLineColor="#b2e0ff">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXToggleButton>
+         </children>
+      </HBox>
+      <Pane layoutX="-1.0" prefHeight="149.0" prefWidth="691.0" style="-fx-background-color: #1e2b3c;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="312.0" layoutX="218.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo0.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="3.0" prefHeight="32.0" prefWidth="254.0">
+         <children>
+            <Label layoutX="15.0" layoutY="1.0" onMouseClicked="#goToUsers" text="Назад" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

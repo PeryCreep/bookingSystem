@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="690.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.krism.viewusers.ViewUsersController">
+   <children>
+      <Pane prefHeight="152.0" prefWidth="690.0" style="-fx-background-color: #1e2b3c;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="312.0" layoutX="218.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo0.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="22.0" layoutY="165.0" prefHeight="431.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="c1" prefWidth="236.99999237060547" text="Логин" />
+          <TableColumn fx:id="c2" prefWidth="205.33331298828125" text="Пароль" />
+            <TableColumn fx:id="c3" prefWidth="202.66668701171875" text="Админ" />
+        </columns>
+      </TableView>
+      <Pane layoutX="5.0" layoutY="3.0" prefHeight="32.0" prefWidth="254.0">
+         <children>
+            <Label layoutX="15.0" layoutY="1.0" onMouseClicked="#goToUsers" text="Назад" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
